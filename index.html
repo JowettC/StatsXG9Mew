@@ -11,6 +11,7 @@
   />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
     body {
       text-align: center;
@@ -76,12 +77,15 @@
         <div class="content-words">SMU - Statx G9 Mew; Care for me</div>
       </div>
       <br/>
-      <div class= "green button" data-aos="fade-left" data-aos-duration="3000">Give Care <img class ="logoButton" src="img\greenLogo.png" alt="image" width="30"  /></div>
+      <div class= "green button" id ="careButton" data-aos="fade-left" data-aos-duration="3000">Give Care <img class ="logoButton" src="img\greenLogo.png" alt="image" width="30"  /></div>
       <div class= "blue button" data-aos="fade-down" data-aos-duration="3000">No Care <img class ="logoButton" src="img\blueLogo.png" alt="image" width="30"  /></div>
     </div>
     <!-- Developed by G9 Mew -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
+    $( "#careButton" ).click(function() {
+      location.href = 'magazine.html';
+});
     AOS.init();
   </script>
   </body>
