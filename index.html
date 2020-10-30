@@ -10,6 +10,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <style>
     body {
       text-align: center;
@@ -69,15 +70,19 @@
   <body>
     <div class="content">
       <div class="grey-top">A Statx-G9-Mew Website</div>
-      <img class ="safe-entry" src="img\SafeEntryLogo.jpg" alt="image" width="160" />
-      <div class ="box-background">
+      <img class ="safe-entry" src="img\SafeEntryLogo.jpg" alt="image" width="160" data-aos="fade-up" data-aos-duration="3000" />
+      <div class ="box-background" data-aos="fade-right" data-aos-duration="3000" >
         <img class ="visting-image" src="img\youAreVisting.jpg" alt="image" width="130" />
         <div class="content-words">SMU - Statx G9 Mew; Care for me</div>
       </div>
       <br/>
-      <div class= "green button">Give Care <img class ="logoButton" src="img\greenLogo.png" alt="image" width="30" /></div>
-      <div class= "blue button">No Care <img class ="logoButton" src="img\blueLogo.png" alt="image" width="30" /></div>
+      <div class= "green button" data-aos="fade-left" data-aos-duration="3000">Give Care <img class ="logoButton" src="img\greenLogo.png" alt="image" width="30"  /></div>
+      <div class= "blue button" data-aos="fade-down" data-aos-duration="3000">No Care <img class ="logoButton" src="img\blueLogo.png" alt="image" width="30"  /></div>
     </div>
     <!-- Developed by G9 Mew -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
