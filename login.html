@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>G9 Mew Stat-x</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- standard shit -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="asset/StylesheetLogin.css" rel="stylesheet">
+
+  <!-- vaildation  -->
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
+</head>
+
+
+<body>
+  <br /><br /><br /><br />
+  <form name="login">
+
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <br>
+          <img src="img/team.jpg" id="icon" alt="User Icon" />
+          <br>
+        </div>
+
+        <!-- Login Form -->
+        <form>
+          <div class=form-group>
+            <input type="text" id="TxtUser" class="fadeIn second" name="email" placeholder="USER">
+          </div>
+          <div class=form-group>
+            <input type="password" id="TxtPass" class="fadeIn third" name="password" placeholder="PASSWORD">
+          </div>
+          <div class=form-group>
+            <button type="button" id="BtnLogin">Login</button>
+          </div>
+          <div class=form-group>
+            <span id="errorMsg"></span>
+          </div>
+
+        </form>
+
+
+
+
+      </div>
+    </div>
+  </form>
+</body>
+<script src="/__/firebase/8.0.0/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="/__/firebase/8.0.0/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="/__/firebase/8.0.0/firebase-auth.js"></script>
+<script src="/__/firebase/8.0.0/firebase-firestore.js"></script>
+<script src="main.js"></script>
+<script>
+  // For debugging purposes
+  console.log("signedOut existing user")
+  firebase.auth().signOut();
+
+  // $("#errorMsg").val() = "test";
+  $("#BtnLogin").click(function() {
+    console.log("login clicked")
+    var email = $("#TxtUser").val()
+    var password = $("#TxtPass").val()
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorMessage)
+    });
+  });
+
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      console.log("email");
+      var displayName = user.displayName;
+      var email = user.email;
+      var emailVerified = user.emailVerified;
+      var photoURL = user.photoURL;
+      var isAnonymous = user.isAnonymous;
+      var uid = user.uid;
+      var providerData = user.providerData;
+      window.location.href = "home.html";
+      console.log(email)
+      // ...
+    } else {
+      // User is signed out.
+
+    }
+  });
+</script>
