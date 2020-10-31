@@ -1,17 +1,14 @@
   // Firebase configuration (json ovject from console)
   var firebaseConfig = {
-    apiKey: "AIzaSyAGCEJPnJodPw0XPlmphGQNznLoM9mtEDA",
-    authDomain: "storvicing.firebaseapp.com",
-    databaseURL: "https://storvicing.firebaseio.com",
-    projectId: "storvicing",
-    storageBucket: "storvicing.appspot.com",
-    messagingSenderId: "783825401766",
-    appId: "1:783825401766:web:fe0a004bb4bbd4acfb4167",
-    measurementId: "G-4942080H8T",
+    apiKey: "AIzaSyDsvYlfV95ui53icp23QLo7phJ7Zrzw90M",
+    authDomain: "g9mewstats.firebaseapp.com",
+    databaseURL: "https://g9mewstats.firebaseio.com",
+    projectId: "g9mewstats",
+    storageBucket: "g9mewstats.appspot.com",
+    messagingSenderId: "1003702686211",
+    appId: "1:1003702686211:web:b1595c3901c9450633b436",
+    measurementId: "G-9EE14GJBJX"
   };
-  // Initialize Firebase 2 line of code to connect firebase
+  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore()
-
-  var database = firebase.database();
-  console.log("database loaded");
+  firebase.analytics();
