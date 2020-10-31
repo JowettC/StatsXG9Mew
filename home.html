@@ -2,7 +2,6 @@
 <html>
   <title>StatsX G9 Mew</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
   <link
@@ -31,27 +30,42 @@
     body {
       text-align: center;
       font-family: "Roboto", sans-serif;
+      position: relative;
     }
     #pdfDisplayer {
       height: 90vh;
     }
     #video {
-      max-width: 700px;
+      width: 70%;
+      height: 500px;
+      max-height: 80vh;
+    }
+    .content {
+      width: 100%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    @media only screen and (max-width: 1024px) {
+      #video {
+        width: 100%;
+      }
     }
   </style>
   <body>
+
     <div class="content">
       <iframe
         id="video"
-        src="https://www.youtube.com/embed/Ke2oEcMDzY4?start=3"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe
       ><br />
-      <button class="glow-on-hover" type="button">
-        View Magazine 
-      </button>
+      <button class="glow-on-hover" type="button">View Magazine</button>
       <!-- Developed by G9 Mew -->
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
