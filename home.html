@@ -22,8 +22,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
   <!-- jquery for code to work in checkSession -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="main.js"></script>
-  <script src="checkSession.js"></script>
+  <!-- <script src="main.js"></script> -->
+  <!-- <script src="checkSession.js"></script> -->
   <link href="asset/button.css" rel="stylesheet" />
   <script>
     AOS.init();
@@ -73,18 +73,16 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe
-      ><br />
-      <a id ="test" >
+      ><br /><a class="nav-link" href="asset/testpdf.pdf">resume <span class="sr-only"></span></a>
+
+      <a id ="test" href="https://notnotwebsite.com/437175ba4191210ee004e1d937494d09/675062f60be47f1ec37fd86c26717a1c.pdf" >
       <button class="glow-on-hover"  type="button"  >View Magazine</button>
       </a>
       <!-- Developed by G9 Mew -->
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      $("#test").click(function() {
-        alert('test')
-        window.location = "/asset/testpdf.pdf";
-      });
+
       AOS.init();
       
 
