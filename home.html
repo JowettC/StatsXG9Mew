@@ -25,7 +25,9 @@
   <script src="main.js"></script>
   <script src="checkSession.js"></script>
   <link href="asset/button.css" rel="stylesheet" />
-
+  <script>
+    AOS.init();
+  </script>
   <style>
     body {
       text-align: center;
@@ -52,12 +54,19 @@
       #video {
         width: 100%;
       }
+      .glow-on-hover{
+        width:80vw;
+        height:200px;
+        font-size:30px;
+      }
     }
+
+
   </style>
   <body>
 
     <div class="content">
-      <iframe
+      <iframe data-aos="zoom-in" 
         id="video"
         src="https://www.youtube.com/embed/dQw4w9WgXcQ"
         frameborder="0"
@@ -65,12 +74,20 @@
         allowfullscreen
       ></iframe
       ><br />
-      <button class="glow-on-hover" type="button"  onclick="window.location.href='./asset/testpdf.pdf'">View Magazine</button>
+      <a id ="test" >
+      <button class="glow-on-hover"  type="button"  >View Magazine</button>
+      </a>
       <!-- Developed by G9 Mew -->
     </div>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+      $("#test").click(function() {
+        alert('test')
+        window.location = "/asset/testpdf.pdf";
+      });
       AOS.init();
+      
+
     </script>
   </body>
 </html>

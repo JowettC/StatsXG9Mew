@@ -1,3 +1,8 @@
+body{
+  background: url(../img/backgroundhome.jpg) no-repeat center center; 
+  background-size: cover;
+}
+
 h6 {
   color: #000000;
 }

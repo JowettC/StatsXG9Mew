@@ -7,10 +7,13 @@ body {
     justify-content: center;
     align-items: center;
     background: #fff;
+    background: url(../img/background.jpg) no-repeat center center fixed; 
+    background-size: cover;
+
 }
 
 .glow-on-hover {
-    width: 220px;
+    width: 60vw;
     height: 50px;
     border: none;
     outline: none;
